@@ -1,0 +1,55 @@
+version 3
+run General-0-20260513-20:03:34-21868
+attr configname General
+attr datetime 20260513-20:03:34
+attr datetimef 20260513-200334
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network waterpipeline.WaterNetwork
+attr processid 21868
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network waterpipeline.WaterNetwork
+config sim-time-limit 500s
+config *.numSensors 5
+config *.sensor[*].reportInterval 10s
+config *.leakGen.lambda 0.02
+config *.gateway.mu 1.0
+config *.gateway.queueLimit 20
+
+par WaterNetwork.sensor[0] typename "\"waterpipeline.SensorNode\""
+par WaterNetwork.sensor[0] reportInterval 10s
+attr unit s
+par WaterNetwork.sensor[1] typename "\"waterpipeline.SensorNode\""
+par WaterNetwork.sensor[1] reportInterval 10s
+attr unit s
+par WaterNetwork.sensor[2] typename "\"waterpipeline.SensorNode\""
+par WaterNetwork.sensor[2] reportInterval 10s
+attr unit s
+par WaterNetwork.sensor[3] typename "\"waterpipeline.SensorNode\""
+par WaterNetwork.sensor[3] reportInterval 10s
+attr unit s
+par WaterNetwork.sensor[4] typename "\"waterpipeline.SensorNode\""
+par WaterNetwork.sensor[4] reportInterval 10s
+attr unit s
+par WaterNetwork.leakGen typename "\"waterpipeline.LeakGenerator\""
+par WaterNetwork.leakGen lambda 0.02
+par WaterNetwork.gateway typename "\"waterpipeline.GatewayQueue\""
+par WaterNetwork.gateway mu 1
+par WaterNetwork.gateway queueLimit 20
+scalar WaterNetwork.gateway receivedPackets 259
+scalar WaterNetwork.gateway droppedPackets 0
+scalar WaterNetwork.gateway finalQueueLength 5
+par WaterNetwork.server typename "\"waterpipeline.MonitoringServer\""
+scalar WaterNetwork.server receivedPackets 254
+scalar WaterNetwork.server averageDelay 3.119868561283
+par WaterNetwork typename "\"waterpipeline.WaterNetwork\""
+par WaterNetwork numSensors 5
+

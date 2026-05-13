@@ -1,0 +1,3 @@
+package waterpipeline;
+
+@license(LGPL);
